@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=<>, initial-scale=1.0"> -->
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/vue/2.6.9/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h2>
+            <!-- 插值法，表达式-->
+            {{msg}}
+        </h2>
+    </div>
+    <script>
+const vm =new Vue({
+    //创建vue的实例对象
+    el:'#app',//元素，el选择器
+    //数据对象
+    data:{
+        //键值关系：msg是属性，值是。。。
+        msg:'hello -vue'
+    }
+})
+/**
+ * data中对象可以直接通过vm访问，但是不能通过访问vm.data.msg访问
+ * {{表达式}}---插值语法--表达式在data中定义的时候我们叫属性
+ * 插值语法一般用在成对的标签中间使用
+ * */
+console.log(vm)
+console.log(vm.data.msg)
+console.log(vm.msg)
+    </script>
+</body>
+</html>
